@@ -756,6 +756,21 @@ footer p {
   text-align: center;
 }
 
+.footer-repo {
+  margin-top: 0.5rem;
+  font-size: 0.85rem;
+}
+
+.footer-repo a {
+  color: rgb(85, 85, 85);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.footer-repo a:hover {
+  color: black;
+}
+
 /* ======================== */
 /* DARK THEME STYLES        */
 /* ======================== */
