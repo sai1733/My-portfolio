@@ -476,16 +476,16 @@ article .icon {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 2.5rem;
+  gap: 2rem;
   max-width: 1100px;
   width: 100%;
-  margin: 2rem auto 0;
+  margin: 1.5rem auto 0;
 }
 
 .project-card {
-  flex: 0 1 350px;
+  flex: 0 1 480px;
   width: 100%;
-  max-width: 350px;
+  max-width: 480px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -522,17 +522,60 @@ article .icon {
 }
 
 .project-title {
-  font-size: 1.35rem;
+  font-size: 1.4rem;
   font-weight: 600;
-  margin: 0.85rem 0 0.35rem;
+  margin: 0.85rem 0 0.2rem;
   color: black;
 }
 
-.project-desc {
+.project-subtitle {
   font-size: 0.9rem;
-  line-height: 1.5;
+  font-weight: 500;
   color: rgb(85, 85, 85);
+  margin-bottom: 0.75rem;
+}
+
+.project-tech-tags {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.4rem;
+  margin-bottom: 1rem;
+}
+
+.tech-tag {
+  background: rgba(0, 0, 0, 0.05);
+  color: rgb(53, 53, 53);
+  font-size: 0.78rem;
+  font-weight: 600;
+  padding: 0.25rem 0.65rem;
+  border-radius: 0.75rem;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.project-bullets {
+  text-align: left;
+  list-style: none;
+  padding: 0 0.25rem;
   margin-bottom: 1.25rem;
+  font-size: 0.86rem;
+  line-height: 1.55;
+  color: rgb(75, 75, 75);
+  flex-grow: 1;
+}
+
+.project-bullets li {
+  position: relative;
+  padding-left: 1.2rem;
+  margin-bottom: 0.65rem;
+}
+
+.project-bullets li::before {
+  content: "▹";
+  position: absolute;
+  left: 0;
+  color: rgb(53, 53, 53);
+  font-weight: bold;
 }
 
 .project-btn {
@@ -804,6 +847,24 @@ body.dark-theme .duration-text {
 body.dark-theme b,
 body.dark-theme strong {
   color: #f8fafc;
+}
+
+body.dark-theme .project-subtitle {
+  color: #94a3b8;
+}
+
+body.dark-theme .tech-tag {
+  background: rgba(255, 255, 255, 0.08);
+  color: #cbd5e1;
+  border-color: rgba(255, 255, 255, 0.12);
+}
+
+body.dark-theme .project-bullets {
+  color: #cbd5e1;
+}
+
+body.dark-theme .project-bullets li::before {
+  color: #38bdf8;
 }
 
 body.dark-theme a {
