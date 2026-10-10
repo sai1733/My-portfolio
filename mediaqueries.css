@@ -1,3 +1,4 @@
+/* LAPTOP & INTERMEDIATE DESKTOPS (<= 1400px) */
 @media screen and (max-width: 1400px) {
   section {
     margin: 0 5rem;
@@ -15,16 +16,21 @@
   }
 }
 
+/* TABLET LANDSCAPE & PORTRAIT (<= 1200px) */
 @media screen and (max-width: 1200px) {
   #navbar {
     display: none;
   }
   #hamburger-nav {
     display: flex;
+    height: 5rem;
+    padding: 0 2.5rem;
+    justify-content: space-between;
+    align-items: center;
   }
   #experience,
   .experience-details-container {
-    margin-top: 2rem;
+    margin-top: 1rem;
   }
   #profile,
   .section-container {
@@ -35,15 +41,33 @@
   }
   section,
   .section-container {
-    height: fit-content;
+    height: auto;
+    min-height: fit-content;
   }
   section {
     margin: 0 5%;
+    padding: 4rem 0 2rem;
+    scroll-margin-top: 5rem;
+  }
+  #profile {
+    height: auto;
+    min-height: fit-content;
+    padding: 2.5rem 0;
+    text-align: center;
   }
   .section-pic-container {
-    width: 275px;
-    height: 275px;
+    width: 250px;
+    height: 250px;
     margin: 0 auto 2rem;
+    display: flex;
+    justify-content: center;
+  }
+  .section-pic-container img {
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+    object-fit: cover;
   }
   .about-containers {
     margin-top: 0;
@@ -52,79 +76,318 @@
   .cert-more-grid {
     grid-template-columns: repeat(2, 1fr);
   }
+  .cert-more-grid.open {
+    max-height: 2500px;
+  }
   .project-card {
     max-width: 500px;
   }
 }
 
+/* TABLET PORTRAIT & LARGE PHONES (<= 768px) */
 @media screen and (max-width: 768px) {
+  #hamburger-nav {
+    padding: 0 1.5rem;
+    height: 4.5rem;
+  }
   .cert-grid,
   .cert-more-grid {
     grid-template-columns: 1fr;
   }
-}
-
-@media screen and (max-width: 600px) {
-  .theme-btn {
-    width: 2.3rem;
-    height: 2.3rem;
-  }
-  .hamburger-right {
-    gap: 0.85rem;
-  }
-  #contact,
-  footer {
-    height: 40vh;
-  }
-  #profile {
-    height: 83vh;
-    margin-bottom: 0;
-  }
-  article {
-    font-size: 1rem;
-  }
-  footer nav {
-    height: fit-content;
-    margin-bottom: 2rem;
-  }
-  .about-containers,
-  .contact-info-upper-container,
-  .btn-container {
-    flex-wrap: wrap;
-  }
-  .contact-info-container {
-    margin: 0;
-  }
-  .contact-info-container p,
-  .nav-links li a {
-    font-size: 1rem;
-  }
-  .experience-sub-title {
-    font-size: 1.25rem;
-  }
-  .logo {
-    font-size: 1.5rem;
-  }
-  .nav-links {
-    flex-direction: column;
-    gap: 0.5rem;
-    text-align: center;
-  }
-  .section-pic-container {
-    width: auto;
-    height: 46vw;
-    justify-content: center;
-  }
-  .section-text-p2 {
-    font-size: 1.25rem;
-  }
-  .title {
-    font-size: 2rem;
-  }
-  .text-container {
-    text-align: justify;
+  .projects-grid {
+    gap: 1.5rem;
   }
   .project-card {
     max-width: 100%;
+  }
+}
+
+/* SMARTPHONES & MOBILE SCREENS (<= 600px) */
+@media screen and (max-width: 600px) {
+  /* Navigation Bar */
+  #hamburger-nav {
+    height: 4.25rem;
+    padding: 0 1.25rem;
+    justify-content: space-between;
+  }
+  .logo {
+    font-size: 1.35rem;
+  }
+  .hamburger-right {
+    gap: 0.75rem;
+  }
+  .theme-btn {
+    width: 2.25rem;
+    height: 2.25rem;
+  }
+  .menu-links {
+    min-width: 160px;
+  }
+  .menu-links a {
+    font-size: 1.1rem;
+    padding: 0.65rem 1.25rem;
+  }
+
+  /* General Section Layout */
+  section {
+    margin: 0 1rem;
+    padding: 2.75rem 0 1.5rem;
+    height: auto;
+    min-height: fit-content;
+    scroll-margin-top: 4.5rem;
+  }
+  .title {
+    font-size: 1.85rem;
+  }
+  .section-text-p1 {
+    font-size: 0.95rem;
+  }
+  .section-text-p2 {
+    font-size: 1.15rem;
+    margin-bottom: 1.25rem;
+  }
+
+  /* Hero / Profile */
+  #profile {
+    height: auto;
+    min-height: fit-content;
+    padding: 1.5rem 0 2rem;
+    margin-bottom: 0;
+  }
+  .section-pic-container {
+    width: 200px;
+    height: 200px;
+    max-width: 55vw;
+    max-height: 55vw;
+    margin: 0 auto 1.5rem;
+    display: flex;
+    justify-content: center;
+  }
+  #profile .section-pic-container img {
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  .btn-container {
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    justify-content: center;
+  }
+  .btn {
+    width: auto;
+    min-width: 7.8rem;
+    padding: 0.8rem 1.15rem;
+    font-size: 0.9rem;
+  }
+  .socials-container {
+    margin-top: 1.25rem;
+    gap: 1.25rem;
+  }
+
+  /* About Me */
+  .about-details-container {
+    margin-top: 1rem;
+  }
+  .about-containers {
+    flex-direction: column;
+    gap: 1.25rem;
+    margin: 1.25rem 0;
+  }
+  .details-container {
+    padding: 1.25rem 1rem;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  .text-container p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    text-align: center;
+  }
+
+  /* Skills Section */
+  .experience-sub-title {
+    font-size: 1.25rem;
+    margin-bottom: 1.25rem;
+  }
+  .skills-container .details-container {
+    padding: 1.25rem 0.75rem;
+  }
+  .skills-article-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem 0.5rem;
+    width: 100%;
+  }
+  article {
+    width: auto;
+    min-width: 0;
+    gap: 0.5rem;
+    justify-content: flex-start;
+    padding-left: 0.5rem;
+    font-size: 0.95rem;
+  }
+  article h3 {
+    font-size: 0.92rem;
+  }
+  article .icon {
+    height: 1.35rem;
+    width: 1.35rem;
+  }
+
+  /* Projects Section */
+  .projects-grid {
+    margin: 1.25rem auto 0;
+    gap: 1.5rem;
+  }
+  .project-card {
+    max-width: 100%;
+    padding: 1.25rem 1rem;
+  }
+  .project-img-wrapper {
+    height: 180px;
+  }
+  .project-title {
+    font-size: 1.3rem;
+  }
+  .project-subtitle {
+    font-size: 0.85rem;
+  }
+  .project-tech-tags {
+    gap: 0.35rem;
+    margin-bottom: 0.85rem;
+  }
+  .tech-tag {
+    font-size: 0.74rem;
+    padding: 0.2rem 0.55rem;
+  }
+  .project-bullets {
+    font-size: 0.83rem;
+    line-height: 1.5;
+    padding: 0;
+    margin-bottom: 1rem;
+  }
+  .project-bullets li {
+    padding-left: 1rem;
+    margin-bottom: 0.55rem;
+  }
+  .project-btn {
+    padding: 0.6rem 1.5rem;
+    font-size: 0.85rem;
+  }
+
+  /* Certifications */
+  .certifications-container {
+    margin: 1.25rem auto 0;
+    gap: 1.25rem;
+  }
+  .cert-card {
+    padding: 1.25rem 1rem;
+  }
+  .cert-title {
+    font-size: 1.15rem;
+  }
+  .cert-issuer {
+    font-size: 0.84rem;
+  }
+  .cert-desc {
+    font-size: 0.84rem;
+    margin-bottom: 1.25rem;
+  }
+  .cert-pill-btn {
+    font-size: 0.78rem;
+    padding: 0.4rem 0.75rem;
+  }
+  .cert-more-grid.open {
+    max-height: 2500px;
+  }
+  .cert-toggle-btn {
+    max-width: 100%;
+    min-width: auto;
+    padding: 0.8rem 1.25rem;
+    font-size: 0.92rem;
+  }
+
+  /* Contact Me */
+  #contact {
+    height: auto;
+    min-height: fit-content;
+    padding: 2.5rem 0 1.5rem;
+  }
+  .contact-info-upper-container {
+    flex-direction: column;
+    padding: 0.75rem;
+    margin: 1.25rem auto;
+    width: 100%;
+    box-sizing: border-box;
+    border-radius: 1.25rem;
+  }
+  .contact-info-container {
+    margin: 0.5rem 0;
+    width: 100%;
+    justify-content: center;
+  }
+  .contact-info-container p {
+    font-size: 0.92rem;
+    word-break: break-all;
+  }
+  .contact-icon,
+  .email-icon {
+    height: 1.75rem;
+  }
+
+  /* Footer */
+  footer {
+    height: auto;
+    min-height: fit-content;
+    padding: 2rem 1rem;
+    margin: 0;
+  }
+  footer nav {
+    height: auto;
+    margin-bottom: 1.25rem;
+  }
+  .nav-links {
+    flex-direction: column;
+    gap: 0.65rem;
+    text-align: center;
+  }
+  .nav-links li a {
+    font-size: 0.95rem;
+  }
+  footer p {
+    font-size: 0.85rem;
+  }
+  .footer-repo {
+    font-size: 0.82rem;
+  }
+}
+
+/* ULTRA-COMPACT SCREENS (<= 380px) */
+@media screen and (max-width: 380px) {
+  .section-pic-container {
+    width: 170px;
+    height: 170px;
+  }
+  .title {
+    font-size: 1.65rem;
+  }
+  .logo {
+    font-size: 1.2rem;
+  }
+  .btn {
+    min-width: 7.2rem;
+    padding: 0.75rem 0.9rem;
+    font-size: 0.85rem;
+  }
+  article h3 {
+    font-size: 0.82rem;
+  }
+  .contact-info-container p {
+    font-size: 0.84rem;
+  }
+  .tech-tag {
+    font-size: 0.7rem;
+    padding: 0.15rem 0.45rem;
   }
 }

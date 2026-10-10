@@ -77,3 +77,15 @@ function toggleCertificates() {
         }
     }
 }
+
+// Close mobile menu when clicking outside
+document.addEventListener("click", (e) => {
+    const hamburgerNav = document.getElementById("hamburger-nav");
+    if (!hamburgerNav) return;
+    const menu = document.querySelector(".menu-links");
+    const icon = document.querySelector(".hamburger-icon");
+    if (menu && menu.classList.contains("open") && !hamburgerNav.contains(e.target)) {
+        menu.classList.remove("open");
+        if (icon) icon.classList.remove("open");
+    }
+});
