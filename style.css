@@ -220,9 +220,15 @@ section{
 
  .section-pic-container{
     display: flex;
+    justify-content: center;
+    align-items: center;
     height: 400px;
     width: 400px;
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+    overflow: hidden;
     margin: auto 0;
+    flex-shrink: 0;
  }
 
  #profile .section-pic-container img {
@@ -230,6 +236,8 @@ section{
     object-fit: cover;
     width: 100%;
     height: 100%;
+    aspect-ratio: 1 / 1;
+    display: block;
  }
 
  .section-text{
@@ -382,13 +390,6 @@ section{
 .section-container {
   gap: 4rem;
   height: 80%;
-}
-
-.section-pic-container {
-  height: 380px;
-  width: 380px;
-  flex-shrink: 0;
-  margin: auto 0;
 }
 
 .section-text-p1{
@@ -796,8 +797,10 @@ article .icon {
 /* FOOTER SECTION */
 
 footer {
-  height: 26vh;
-  margin: 0 1rem;
+  height: auto;
+  min-height: fit-content;
+  padding: 3rem 1rem;
+  margin: 0;
 }
 
 footer p {
